@@ -41,7 +41,7 @@ console.log(typeof(answers)); */
 /* const category = 'toys';
 console.log(`https://${category}/5`); */
 
-const name = prompt("Ваше имя?", "");
+/* const name = prompt("Ваше имя?", "");
 alert(`Hello, ${name}`); 
 
 
@@ -49,7 +49,27 @@ let incr = 10,
     decr = 10;
 
 incr++;
-decr++;
+decr--;
 
 console.log(incr);
-console.log(decr);
+console.log(decr); */
+
+let numberOfFilms = +prompt("Сколько фильмов вы же посмотрели?", "");
+personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+}
+
+let lastMovie1 = prompt("Один из последних просмотренных фильмов?", ""),
+    noteOfMovie1 = prompt("На сколько его оцените?", ""),
+    lastMovie2 = prompt("Один из последних просмотренных фильмов?", ""),
+    noteOfMovie2 = prompt("На сколько его оцените?", "");
+
+personalMovieDB.movies[lastMovie1] = noteOfMovie1;
+personalMovieDB.movies[lastMovie2] = noteOfMovie2;
+
+
+console.log(personalMovieDB);
